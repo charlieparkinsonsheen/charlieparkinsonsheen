@@ -173,6 +173,19 @@ footer {
   color: #f4f4f0;
 }
 
+.main-film-image {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.main-film-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-description {
   display: grid;
   grid-template-columns: 2fr 1fr;
