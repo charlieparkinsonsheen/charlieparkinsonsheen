@@ -124,10 +124,19 @@ nav {
 .section-label { margin: 0; }
 
 .about-copy {
-  max-width: 580px;
+  max-width: 620px;
   margin-top: 100px;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.about-copy p {
+  margin: 0 0 24px 0;
+}
+
+.about-copy a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .contact {
