@@ -9,6 +9,11 @@
 
 * { box-sizing: border-box; }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -56,6 +61,7 @@ nav {
 }
 
 .intro {
+  height: 100vh;
   min-height: 100vh;
   padding: 16px;
   display: flex;
