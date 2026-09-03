@@ -1,5 +1,5 @@
 const images = [
-  "lens_flare.jpg"
+  "images/lens_flare.jpg"
 ];
 
 const image = document.getElementById("random-image");
