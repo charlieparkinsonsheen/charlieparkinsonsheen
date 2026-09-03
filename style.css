@@ -1,272 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
-
-:root {
-  --bg: #f4f4f0;
-  --text: #111;
-  --line: #111;
-  --gap: 18px;
+* {
+  box-sizing: border-box;
 }
 
-* { box-sizing: border-box; }
-
-html, body {
+html,
+body {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  margin: 0;
 }
-
-html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  line-height: 1.35;
-  cursor: crosshair;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-a:hover { text-decoration: underline; }
+/* HEADER */
 
-.site-header {
+.header {
   position: fixed;
-  z-index: 10;
   top: 0;
   left: 0;
+
   width: 100%;
-  padding: 16px;
+
+  padding: 25px 30px;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  pointer-events: none;
-}
 
-.site-header > * { pointer-events: auto; }
+  z-index: 10;
+}
 
 .name {
-  font-size: 14px;
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.04em;
+  color: black;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 1.05;
+  font-weight: 400;
 }
 
-nav {
-  display: flex;
-  gap: 22px;
+.about-link {
+  color: black;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 400;
 }
 
-.intro {
-  height: 100vh;
-  min-height: 100vh;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 22px;
-}
 
-.intro p { margin: 0; }
+/* HOMEPAGE */
 
-.work {
-  padding: 0 16px;
-}
-
-.project {
-  margin-bottom: 80px;
-}
-
-.media-placeholder,
-.video-placeholder,
-.image-placeholder {
+.home {
   width: 100%;
-  background:
-    radial-gradient(circle at 25% 30%, rgba(255,255,255,.8), transparent 25%),
-    linear-gradient(135deg, #b8b7af 0%, #696961 45%, #c9c7bc 100%);
+  height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
+  padding: 80px 40px 60px;
 }
 
-.media-placeholder {
-  height: min(76vh, 760px);
-}
+.image-container {
+  width: min(72vw, 1050px);
+  height: min(68vh, 680px);
 
-.media-placeholder.second {
-  background: linear-gradient(120deg, #cfcfc7, #77766e);
-  height: 65vh;
-}
-
-.media-placeholder.third {
-  background: linear-gradient(40deg, #8e8d84, #d7d5ca);
-  height: 65vh;
-}
-
-.media-placeholder span,
-.video-placeholder span,
-.image-placeholder span {
-  opacity: .55;
-  mix-blend-mode: multiply;
-}
-
-.project-info {
   display: flex;
-  justify-content: space-between;
-  padding-top: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
-.text-section {
-  border-top: 1px solid var(--line);
-  margin: 140px 16px 0;
-  padding-top: 8px;
-  min-height: 55vh;
-}
-
-.section-label { margin: 0; }
-
-.about-copy {
-  max-width: 620px;
-  margin-top: 100px;
-  font-size: 15px;
-  line-height: 1.35;
-}
-
-.about-copy p {
-  margin: 0 0 24px 0;
-}
-
-.about-copy a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.contact {
-  min-height: 40vh;
-}
-
-.links {
-  margin-top: 100px;
-  display: flex;
-  gap: 24px;
-}
-
-footer {
-  border-top: 1px solid var(--line);
-  margin: 0 16px;
-  padding: 8px 0 16px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.back { margin-right: 0; }
-
-.project-page {
-  padding: 150px 16px 80px;
-}
-
-.project-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 40px;
-}
-
-.project-heading h1 {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.video-placeholder {
-  height: 75vh;
-  background: #171717;
-  color: #f4f4f0;
-}
-
-.main-film-image {
-  width: 100%;
-  height: 75vh;
-  overflow: hidden;
-}
-
-.main-film-image img {
+.image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
+  object-fit: contain;
+
   display: block;
 }
 
-.project-description {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  margin: 100px 0;
-  font-size: 16px;
-  line-height: 1.3;
+
+/* ABOUT PAGE */
+
+.about-page {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
 }
 
-.project-description > div:first-child { max-width: 680px; }
+.about-content {
+  padding: 130px 30px 80px;
 
-.credits {
-  font-size: 11px;
+  max-width: 900px;
 }
 
-.image-placeholder.large {
-  height: 80vh;
-  margin-bottom: 20px;
+.about-section {
+  margin-bottom: 70px;
 }
 
-@media (max-width: 700px) {
-  body { font-size: 11px; }
+.about-section h2 {
+  font-size: 13px;
+  font-weight: 400;
 
-  .site-header { padding: 12px; }
+  margin: 0 0 20px 0;
+}
 
-  nav { gap: 10px; }
+.about-section p {
+  font-size: 15px;
+  line-height: 1.5;
 
-  .work { padding: 0 12px; }
+  max-width: 650px;
 
-  .media-placeholder,
-  .media-placeholder.second,
-  .media-placeholder.third {
+  margin: 0 0 15px 0;
+}
+
+.work-item {
+  display: flex;
+  gap: 35px;
+
+  font-size: 15px;
+}
+
+.work-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.about-section a {
+  color: black;
+  text-decoration: none;
+}
+
+.about-section a:hover,
+.about-link:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 20px;
+  }
+
+  .name,
+  .about-link {
+    font-size: 14px;
+  }
+
+  .home {
+    padding: 70px 20px 40px;
+  }
+
+  .image-container {
+    width: 90vw;
     height: 65vh;
   }
 
-  .project { margin-bottom: 60px; }
-
-  .text-section {
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 100px;
+  .about-content {
+    padding: 110px 20px 60px;
   }
 
-  .about-copy {
-    margin-top: 60px;
-    font-size: 15px;
+  .about-section {
+    margin-bottom: 55px;
   }
 
-  footer {
-    margin: 0 12px;
-    gap: 20px;
-  }
-
-  .project-page {
-    padding: 120px 12px 60px;
-  }
-
-  .project-description {
-    display: block;
-    margin: 70px 0;
-    font-size: 15px;
-  }
-
-  .credits { margin-top: 60px; }
-
-  .video-placeholder { height: 55vh; }
-
-  .image-placeholder.large { height: 55vh; }
 }
