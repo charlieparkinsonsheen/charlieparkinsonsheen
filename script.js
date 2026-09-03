@@ -1,12 +1,10 @@
-// Small interaction: reveal a custom cursor label when hovering over projects.
-const projects = document.querySelectorAll('.project');
+const images = [
+  "images/Still%202026-03-13%20130236_6.650.1.jpg"
+];
 
-projects.forEach(project => {
-  project.addEventListener('mouseenter', () => {
-    document.body.classList.add('hovering-project');
-  });
+const image = document.getElementById("random-image");
 
-  project.addEventListener('mouseleave', () => {
-    document.body.classList.remove('hovering-project');
-  });
-});
+if (image && images.length > 0) {
+  const randomNumber = Math.floor(Math.random() * images.length);
+  image.src = images[randomNumber];
+}
