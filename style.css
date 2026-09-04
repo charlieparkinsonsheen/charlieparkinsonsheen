@@ -155,15 +155,13 @@ body {
 
   .about-content {
     height: auto;
-
     grid-template-columns: 1fr;
-
     padding: 110px 20px 60px;
-
     row-gap: 45px;
   }
 
 }
+
 
 /* MOBILE */
 
@@ -195,10 +193,15 @@ body {
     margin-bottom: 55px;
   }
 
-  .portrait {
-  width: 100px !important;
-  height: auto !important;
-  max-width: 100% !important;
+}
+
+
+/* PORTRAIT */
+
+.portrait {
+  width: 100px;
+  height: auto;
+  max-width: 100%;
   display: block;
   margin-top: 20px;
 }
