@@ -195,4 +195,9 @@ body {
     margin-bottom: 55px;
   }
 
+  .portrait {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-top: 25px;
 }
